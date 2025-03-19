@@ -91,6 +91,7 @@ const chatModel = require("./models/chat-model");
 const messageModel = require("./models/message-model");
 const userModel = require("./models/user-model");
 
+app.set("views", path.join(__dirname, "views"));
 app.set('view engine' , 'ejs');
 
 app.use(express.static(path.join(__dirname , 'public')));
