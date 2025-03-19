@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RM-Home</title>
+    <link rel="stylesheet" href="/stylesheets/userHome.css">
+</head>
+<body>    
+    
+    <% if(error && error.length>0){ %>
+        <div id="error_flash">
+            <p><%= error %></p>
+        </div>
+    <% } %>    
+    <% if(success && success.length>0){ %>
+        <div id="success_flash">
+            <p><%= success %></p>
+        </div>
+    <% } %>
+
+    <div class="navbar">
+        <div class="logo"><img src="/images/rm_logo.png" alt="logo"></div>
+        <div class="name">
+            <a href="/">
+                <h1>RM-Chatify</h1>
+            </a>            
+        </div>
+        <a id="logout" href="/users/logout"><div class="links">Logout</div></a>
+    </div>
+
+    <div id="main">
+        <div id="left">
+            <div id="mess">Start New Chat</div>
+            <div id="search">
+                <form action="/users/chats/new" method="post">
+                    <input id="newChat" placeholder="Enter Name" name="name" type="text">
+                    <button type="submit" id="newChatBtn" >Start</button>
+                </form>
+                
+            </div>
+            <div id="all">
+                <% user.chats.forEach(function(chat){ %>
+                    
+                        <% if(user._id.toString() === chat.user_1.toString()){ %>                                    
+                            <a href="/users/chats/<%= chat.user_2 %>">
+                        <% } else { %>
+                            <a href="/users/chats/<%= chat.user_1 %>">
+                        <% } %>
+                        <div class="myChats">
+                            <div class="pic"></div>
+                            <div class="Cname">
+                                <p>                                 
+                                    <% if(user._id.toString() === chat.user_1.toString()){ %>                                    
+                                        <%= chat.user_2_name %> 
+                                    <% } else { %>
+                                        <%= chat.user_1_name %>
+                                    <% } %>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                <% }) %>
+                              
+            </div>
+        </div>
+        <div id="right">
+            <div id="empty">No Messages to Show</div>
+        </div>
+    </div>
+
+    <script>
+        const user = <%- JSON.stringify(user) %>;
+    </script>
+    <script src="/javascripts/userHome.js"></script>
+</body>
+</html>

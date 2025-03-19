@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/stylesheets/login.css">
+</head>
+<body>
+
+    <% if(error && error.length>0){ %>
+        <div id="error_flash">
+            <p><%= error %></p>
+        </div>
+    <% } %>    
+    <% if(success && success.length>0){ %>
+        <div id="success_flash">
+            <p><%= success %></p>
+        </div>
+    <% } %>
+
+    <div class="navbar">
+        <div class="logo"><img src="/images/rm_logo.png" alt="logo"></div>
+        <div class="name">
+            <a href="/">
+                <h1>RM-Chatify</h1>
+            </a>            
+        </div>
+        <div class="links"></div>
+    </div>
+
+    <div id="page">
+        <div id="main">
+            <div id="left">
+                    <div class="block" id="initial">Welcome Back</div>   
+                    <div class="block" id="block1">Please provide your email</div>
+                    <div class="block" id="block2">Please Enter your passode</div>                    
+                    <div id="end"><p id="para">Welcome to RM-Chatify</p></div>
+            </div>
+            <div id="right">
+                <div id="text">Welcome Back</div>
+                <div id="forms">
+                    
+                        <form id="signupForm" action="/users/login" method="POST">                            
+                    
+                            <div class="input-group">
+                                <label for="email">Email:</label>
+                                <input type="email" placeholder="Email" id="email" name="email" required>
+                            </div>
+                    
+                            <div class="input-group">
+                                <label for="password">Password:</label>
+                                <input type="password" placeholder="Password" id="password" name="password" required>
+                            </div>
+                                                
+                            <div id="signupBTN"><button type="submit">Login</button></div>
+                            
+                            <div id="login_link">Don't have an account? <a href="/users/signup">Signup</a></div>
+                        </form>
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/javascripts/login.js"></script>
+</body>
+</html>

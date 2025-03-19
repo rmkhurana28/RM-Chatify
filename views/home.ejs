@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RM-Chatify</title>
+    <link rel="stylesheet" href="stylesheets/home.css">
+</head>
+<body>    
+
+    <% if(error && error.length>0){ %>
+        <div id="error_flash">
+            <p><%= error %></p>
+        </div>
+    <% } %>    
+    <% if(success && success.length>0){ %>
+        <div id="success_flash">
+            <p><%= success %></p>
+        </div>
+    <% } %>
+
+    <div class="navbar">
+        <div class="logo"><img src="/images/rm_logo.png" alt="logo"></div>
+        <div class="name">
+            <h1>RM-Chatify</h1>
+        </div>
+        <div class="links"></div>
+    </div>
+
+    <div id="page1">
+        <h1 id="message">Hello !!</h1>
+        <div id="test"></div>
+        <h2 id="scrollDown">Scroll Down To Get Started</h2>
+    </div>
+    <div id="page2">
+        <div id="image">
+            <img src="images/1.webp" alt="image NOT found">
+        </div>
+        <div id="section">
+            <div id="top">
+                <h1>RM-Chatify</h1>
+            </div>
+            <div id="middle">
+                 <a href="/users/login"><button>Start Your Journey</button></a>
+            </div>
+            <div id="bottom">
+                <div class="data" id="p1">
+                    <h1 class="sample">➢ Real-Time Messaging</h1>
+                </div>
+                <div class="data" id="p2">
+                    <h1 class="sample">➢ User-Friendly Interface</h1>
+                </div>
+                <div class="data" id="p3">
+                    <h1 class="sample">➢ Fast and Secure</h1>
+                </div>
+                <div class="data" id="p4">
+                    <h1 class="sample">➢ Private Chats</h1>
+                </div>
+                <div class="data" id="p5">
+                    <h1 class="sample">➢ Dark Themed</h1>
+                </div>
+                <div class="data" id="p6">
+                    <h1 class="sample">➢ Compatible</h1>
+                </div>                
+            </div>
+        </div>
+    </div>
+    <div id="page3">
+        <div id="Cname">
+            <h1>RM&#8209;Chatify</h1>
+        </div>
+        
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="javascripts/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Base Styles */
+  html ,body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    height : 100%;
+    width  :100%;
+  }
+  
+  #error_flash{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 0, 0, 0.65);
+    border-radius: 20px;
+    height: 7%;
+    width: 17%;
+    position: absolute;
+    top:32%;
+    left: 68%;
+  }
+  #success_flash{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 255, 34, 0.65);
+    border-radius: 20px;
+    height: 7%;
+    width: 17%;
+    position: absolute;
+    top: 32%;
+    left: 68%;
+  }
+
+  .navbar{
+      height: 15%;
+      width: 100%;    
+      background-color: #111;
+      color: white;
+      display: flex;
+      padding : 30px;
+      justify-content :space-between;
+      align-items: center;
+      font-size: 20px;    
+  }
+  
+  .logo{
+    background-color: white;
+    width: 10%;
+    height: 190%;
+    margin-top: 50px;
+}
+.logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+  .name a{
+    text-decoration: none;
+  }
+  .name a h1{
+    color: white;
+    font-size: 90px;
+    
+    text-shadow: 0 0 20px rgb(255, 255, 255) , 0 0 20px rgb(0, 0, 0);
+      
+  }
+  .name a h1:hover{
+    transition-duration: 0.7s;
+    
+    scale : 1.2;
+  }
+  .links{}
+  
+  #page{
+    height: 85%;
+    width: 100%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #page #main{
+    background-color: rgb(52, 52, 52);
+    height: 95%;
+    width: 85%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap : 2%;
+  }
+  
+  #page #main #left{
+    background-color: rgb(68, 68, 68);
+    height: 96%;
+    width: 62%;
+    border-radius: 1.5%;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap : 5px;
+    overflow: hidden;
+    justify-content: top;
+  }
+  
+  #page #main #left .block{
+    background-color: rgb(121, 121, 121);
+    height: 10%;    
+    border-radius: 10px;
+    font-size: 30px;
+    margin : 10px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #page #main #left #initial{    
+    width: 60%;
+    height: 10%;    
+    border-radius : 10px;
+    font-size: 70px;
+  }
+
+  #page #main #left #block1{
+    opacity: 0;    
+    width: 70%;
+  }
+  #page #main #left #block2{    
+    width: 80%;
+    opacity: 0;
+  }
+  
+  #page #main #left #end{
+    background-color: rgb(121, 121, 121);
+    height: 50%;
+    width: 70%;
+    justify-self: baseline;
+    align-self: center;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 50px;
+    font-weight: 700;
+    opacity: 0;
+  }
+  
+  #page #main #right{
+    background-color: rgb(68, 68, 68);
+    height: 96%;
+    width: 33%;
+    border-radius: 1.5%;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap : 1%;
+  }
+  
+  #page #main #right #text{    
+    width: 97%;
+    height: 10%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 280%;
+    font-weight: 700;
+  }
+  #page #main #right #forms{
+    width: 97%;
+    height: 87%;
+  }
+  #page #main #right #forms #signupForm{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap : 2%;
+  }
+  
+  #page #main #right #forms #signupForm .input-group{
+    background-color: rgb(60, 60, 60);
+    height: 17%;
+    width: 100%;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    gap : 3%;
+  }
+  #page #main #right #forms #signupForm .input-group label{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 40%;
+    font-size: 150%;
+    padding-left: 1%;
+  }
+  #page #main #right #forms #signupForm .input-group input{
+    background-color: rgb(41, 41, 41);
+    height: 45%;
+    width: 98%;
+    border: none;
+    outline: none;
+    color: white;
+    margin-left: 1%;
+    border-radius: 5px;
+    padding-left: 1%;
+    font-size: 130%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+  
+  
+  #page #main #right #forms #signupForm #signupBTN{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  #page #main #right #forms #signupForm #signupBTN button{
+    height: 70%;
+    width: 99%;
+    background-color: rgb(191, 191, 191);
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  #page #main #right #forms #signupForm #signupBTN button:hover{
+    scale: 1.04;
+    transition-duration: 0.7s;
+    cursor :pointer;
+  }
+  #page #main #right #forms #signupForm #login_link{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 110%;
+  }
+  
+  #page #main #right #forms #signupForm #login_link a{
+    color :rgb(255, 255, 255);
+    margin-left: 5px;
+  }

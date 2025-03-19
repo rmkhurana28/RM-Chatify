@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="/stylesheets/signup.css">
+</head>
+<body>
+
+    <% if(error && error.length>0){ %>
+        <div id="error_flash">
+            <p><%= error %></p>
+        </div>
+    <% } %>    
+    <% if(success && success.length>0){ %>
+        <div id="success_flash">
+            <p><%= success %></p>
+        </div>
+    <% } %>
+    
+
+    <div class="navbar">
+        <div class="logo"><img src="/images/rm_logo.png" alt="logo"></div>
+        <div class="name">
+            <a href="/">
+                <h1>RM-Chatify</h1>
+            </a>            
+        </div>
+        <div class="links"></div>
+    </div>
+
+    <div id="page">
+        <div id="main">
+            <div id="left">
+                    <div class="block" id="initial">Hey, what's your name??</div>
+                    <div class="block" id="block1">Yeah, that name will work</div>
+                    <div class="block" id="block2">What About your Email-ID??</div>
+                    <div class="block" id="block3">That email looks unique :)</div>
+                    <div class="block" id="block4">Make sure to choose a Strong passcode</div>
+                    <div id="end"><p id="para">Welcome to RM-Chatify</p></div>
+            </div>
+            <div id="right">
+                <div id="text">Signup Form</div>
+                <div id="forms">
+                    
+                        <form id="signupForm" action="/users/signup" method="POST" enctype="multipart/form-data">
+                            <div class="input-group">
+                                <label for="name">Name:</label>
+                                <input type="text" placeholder="Name" id="name" name="name" required>
+                            </div>
+                    
+                            <div class="input-group">
+                                <label for="email">Email:</label>
+                                <input type="email" placeholder="Email" id="email" name="email" required>
+                            </div>
+                    
+                            <div class="input-group">
+                                <label for="password">Password:</label>
+                                <input type="password" placeholder="Password" id="password" name="password" required>
+                            </div>
+                    
+                            <div class="input-group">
+                                <label for="pic">Profile Picture:</label>
+                                <input type="file" id="pic" name="profile_pic" accept="image/*">
+                            </div>
+                            <div id="signupBTN"><button type="submit">Signup</button></div>
+                            
+                            <div id="login_link">Already have an account? <a href="/users/login">Login</a></div>
+                        </form>
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/javascripts/signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Base Styles */
+  html ,body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    height : 100%;
+    width  :100%;
+  
+    overflow-x: hidden;
+  }
+  
+  #error_flash{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 0, 0, 0.65);
+    border-radius: 20px;
+    height: 7%;
+    width: 17%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+  }
+  #success_flash{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 255, 34, 0.65);
+    border-radius: 20px;
+    height: 7%;
+    width: 17%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+  }
+
+  .navbar{
+      height: 130px;
+      width: 100%;    
+      background-color: #111;
+      color: white;
+      display: flex;
+      padding : 30px;
+      justify-content :space-between;
+      align-items: center;
+      font-size: 20px;    
+  }
+  
+  .logo{
+    background-color: white;
+    width: 10%;
+    height: 190%;
+    margin-top: 50px;
+}
+.logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+  .name a{
+    text-decoration: none;
+  }
+  .name a h1{
+    color: white;
+    font-size: 90px;
+    
+    text-shadow: 0 0 20px rgb(255, 255, 255) , 0 0 20px rgb(0, 0, 0);
+      
+  }
+  .name a h1:hover{
+    transition-duration: 0.7s;
+    
+    scale : 1.2;
+  }
+  .navbar #logout{
+    background-color: rgba(255, 0, 0, 0.935);
+    width: 5%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    color : rgba(255, 255, 255, 0.868)
+  }
+  .navbar #logout:hover{
+    transition-duration: 0.7s;
+    scale : 1.2;
+  }
+  .links{}
+  
+  #main{
+      background-color: transparent;
+      height: 83%;
+      width: 95%;
+      margin-left: 2%;
+      margin-top : 1%;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+  }
+  
+  #main #left{
+      background-color: rgb(44, 44, 44);
+      height: 99%;
+      width: 23%;
+  
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      border-radius: 5px;
+  }
+  #main #left #mess{
+      background-color: transparent;
+      width: 100%;
+      height: 7%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size : 40px;
+      text-decoration: underline 2px;
+  }
+  #main #left #search{
+      width: 100%;
+      height: 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+  }
+
+#main #left #search form {
+    width: 100%; 
+    display: flex; 
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%; 
+    margin: 0; 
+    padding: 0; 
+}
+  #main #left #search #newChat{
+      height: 80%;
+      width: 67%;
+      background-color: rgb(31, 31, 34);
+      outline: none;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      padding : 5px;
+      font-size: 30px;
+  }
+  #main #left #search #newChatBtn{
+      height: 80%;
+      width: 25%;
+      background-color: rgb(31, 31, 34);
+      outline: none;
+      border: none;
+      border-radius: 15px;
+      color : white;
+      font-size: 25px;
+  }
+  #main #left #search #newChatBtn:hover{
+    scale : 1.05;
+    transition-duration: 0.5s;
+    box-shadow: 0 0 15px rgb(64, 65, 64);
+    cursor : pointer;
+}
+  #main #left #all{
+    background-color: transparent;
+    width: 100%;
+    height: 80%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#main #left #all a{
+    width: 96%;
+    min-height: 15%;
+    max-height: 15%;
+    display: flex;
+    color : white;
+    text-decoration: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+  }
+  #main #left #all .myChats{
+    background-color: rgb(36, 36, 39);
+    min-height: 100%;
+    width: 96%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+  #main #left #all .myChats .pic{
+      background-color: transparent;
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+  }
+  #main #left #all .myChats:hover{
+    scale : 1.05;
+    transition-duration: 0.5s;
+    box-shadow: 0 0 15px rgb(64, 65, 64);
+    cursor : pointer;
+}
+  #main #left #all .myChats .pic img{
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      object-fit: cover;
+      border-radius: 50%;
+  }
+  #main #left #all .myChats .Cname{
+      background-color: transparent;
+      height: 80%;
+      width: 70%;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+  }
+  #main #left #all .myChats .Cname p{
+      font-size: 45px;    
+  }
+  #main #right{
+      background-color: rgb(44, 44, 44);
+      height: 99%;
+      width: 75%;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      font-size: 80px;
+      font-weight: 800;
+  } 
