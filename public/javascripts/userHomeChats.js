@@ -1,4 +1,8 @@
-const socket = new io();
+// const socket = new io();
+const socket = io("https://rm-chatify.vercel.app", {
+  transports: ["polling"]
+});
+
 
 socket.emit('user_id' , user._id);
 
