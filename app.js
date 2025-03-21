@@ -20,7 +20,15 @@ app.use(flash());
 
 const http = require('http');
 const server = http.createServer(app);
-const { Server} = require('socket.io');
+// const { Server} = require('socket.io');
+const io = require("socket.io")(server, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"]
+  },
+  transports: ["polling"],  // Use long polling instead of WebSockets
+});
+
 const io = new Server(server);
 
 let n = 0;
