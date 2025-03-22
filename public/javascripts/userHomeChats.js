@@ -2,7 +2,8 @@
 console.log('user : ' , user);
 console.log('reciever : ' , reciever);
 
-const socket = new io("ws://localhost:3000", {
+// const socket = new io("ws://localhost:3000", {
+const socket = new io("wss://rm-chatify.vercel.app", {  
     transports: ["websocket"],
     withCredentials: true
 });
