@@ -21,7 +21,16 @@ app.use(flash());
 const http = require('http');
 const server = http.createServer(app);
 const { Server} = require('socket.io');
-const io = new Server(server);
+// const io = new Server(server);
+
+const io = new Server(server, {
+    cors: {
+      origin: "*",  
+      methods: ["GET", "POST"],
+      credentials: true
+    }
+  });
+  
 
 let n = 0;
 const socket_ids = [];
@@ -32,18 +41,21 @@ let N = 0;
 
 io.on('connection' , (socket) => {
    
+    console.log("new user connected : " , socket.id);
 
     socket.on('user_id' , (id) => {
         socket_ids[n] = socket.id;
         user_ids[n++] = id
     })    
-        
-
+            
     socket.on('u_message' , (data) => {
+        console.log("message recieved at backend as " , data);
         message_data[N++] = data;
         const s_index = user_ids.indexOf(data.sender_id);
         const r_index = user_ids.indexOf(data.reciever_id);
-        io.to(socket_ids[s_index]).emit('s_incoming' , data.data);
+        if(s_index != -1){
+            io.to(socket_ids[s_index]).emit('s_incoming' , data.data);
+        }        
         if(r_index != -1){
             io.to(socket_ids[r_index]).emit('r_incoming' , data.data);
         }        
@@ -52,6 +64,7 @@ io.on('connection' , (socket) => {
     
 
     socket.on('disconnect' , async () => {
+        console.log("user dis-connected : " , socket.id);
         const index = socket_ids.indexOf(socket.id);
         socket_ids.splice(index , 1);
         user_ids.splice(index , 1);
