@@ -20,17 +20,16 @@ app.use(flash());
 
 const http = require('http');
 const server = http.createServer(app);
-const { Server} = require('socket.io');
-// const io = new Server(server);
+// const { Server} = require('socket.io');
+const io = require("socket.io")(server, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"]
+  },
+  transports: ["polling"],  // Use long polling instead of WebSockets
+});
 
-const io = new Server(server, {
-    cors: {
-      origin: "*",  
-      methods: ["GET", "POST"],
-      credentials: true
-    }
-  });
-  
+const io = new Server(server);
 
 let n = 0;
 const socket_ids = [];
@@ -104,6 +103,7 @@ const chatModel = require("./models/chat-model");
 const messageModel = require("./models/message-model");
 const userModel = require("./models/user-model");
 
+app.set("views", path.join(__dirname, "views"));
 app.set('view engine' , 'ejs');
 
 app.use(express.static(path.join(__dirname , 'public')));
