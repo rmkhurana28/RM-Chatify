@@ -29,7 +29,7 @@ const io = require("socket.io")(server, {
   transports: ["polling"],  // Use long polling instead of WebSockets
 });
 
-const io = new Server(server);
+// const io = new Server(server);
 
 let n = 0;
 const socket_ids = [];
