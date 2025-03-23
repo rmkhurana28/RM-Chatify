@@ -1,5 +1,5 @@
-console.log('user : ' , user);
-console.log('reciever : ' , reciever);
+
+
 
 // const socket = new io("ws://localhost:3000", {
 // const socket = new io("wss://rm-chatify.vercel.app", {  
@@ -46,14 +46,12 @@ sendMessageButton.addEventListener('click', () => {
         data: newMessage.value,
     });    
 
-    console.log("Message sent from frontend:", newMessage.value);
     newMessage.value = '';
 });
 
 
 socket.on('s_incoming', (s_message) => {
     try {
-        console.log('Message from server (s):', s_message);
         const parent = document.getElementById('chatMessages');
 
         const sender_div = document.createElement('div');
@@ -109,7 +107,6 @@ socket.on('s_incoming', (s_message) => {
 
 socket.on('r_incoming', (r_message) => {
     try {
-        console.log('Message from server (receiver):', r_message);
         const parent = document.getElementById('chatMessages');
 
         const reciever_div = document.createElement('div');
