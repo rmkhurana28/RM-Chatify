@@ -6,7 +6,7 @@ console.log('reciever : ' , reciever);
 //     transports: ["websocket"],
 //     withCredentials: true
 // });
-const socket = io("https://rm-chatify.vercel.app", {  
+const socket = io("https://rm-chatify-production.up.railway.app", {  
     transports: ["polling"],  // Switch from websocket to polling
     withCredentials: true
 });
