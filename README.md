@@ -399,4 +399,4 @@ This is a portfolio project, but suggestions and feedback are welcome!
 
 ---
 
-**Built with ❤️ by Ridham Khurana**
+**Made by ♠️ Ridham Khurana**
