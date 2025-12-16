@@ -393,10 +393,10 @@ This is a portfolio project, but suggestions and feedback are welcome!
 
 ## 📧 Contact
 
-**Rahul Khurana**
+**Ridham Khurana**
 - GitHub: [@rmkhurana28](https://github.com/rmkhurana28)
 - Email: [Your Email Here]
 
 ---
 
-**Built with ❤️ by Rahul Khurana**
+**Built with ❤️ by Ridham Khurana**
